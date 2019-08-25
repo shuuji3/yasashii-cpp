@@ -1,7 +1,7 @@
 #include <iostream>
 
 template<class T>
-T square(T num);
+auto square(T num) -> T;
 
 int main() {
   int num;
@@ -17,6 +17,6 @@ int main() {
 }
 
 template<class T>
-inline T square(T num) {
+inline auto square(T num) -> T {
   return num * num;
 }
