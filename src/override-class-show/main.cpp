@@ -1,4 +1,5 @@
-// operator << をオーバーライドすることで、自分で定義したクラスを cout できるようにする
+// operator << をオーバーライドすることで、自分で定義したクラスを cout
+// できるようにする
 #include <iostream>
 
 class Point {
@@ -17,6 +18,7 @@ class Point {
 
 std::ostream &operator<<(std::ostream &os, const Point &p) {
   os << "Point{" << p.x << ", " << p.y << "}" << std::endl;
+  return os;
 }
 
 int main() {
